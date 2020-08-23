@@ -1,1 +1,69 @@
-Hello world
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+		<link rel="stylesheet" href="css/open-iconic-bootstrap.css" type="text/css"/>
+		<link rel="stylesheet" href="css/style.css" type="text/css"/>
+		<title></title>
+	</head>
+	<body class = "bg-dark">
+		<div class = "container-fluid w-75">
+			<br/><br/><br/><br/><br/>
+			<h1 style = "text-align: center; color: white">Critical Path Calculator</h1>
+			<form name = "f1" onsubmit = "return validateForm(this)" method = "post">
+				<div class = "form-group row">
+				    <div class="col-sm-5">
+				     	<input type="number" class="form-control" id="inputPassword" name = "time" placeholder="Time" required>
+				    </div>
+					<div class="col-sm-5">
+				     	<input type="text" class="form-control" name = "ipa" placeholder="IPA (A, B)">
+				    </div>
+					<div class = "col-sm-2">
+						<input type="submit" class="btn btn-primary mb-2" value = "Add to list"></input>
+					</div>
+				</div>
+			</form>
+			<div class = "row">
+				<div class = "col-5"></div>
+				<div class = "col-2"><button class = "btn btn-primary center" onclick = "fn()">Finish</button></div>
+			</div><br/>
+			<div class = "table-responsive">
+	        	<table class="table table-dark" id = "table">
+	            	<thead>
+	                <tr>
+	                  	<th>#</th>
+	                  	<th>Time</th>
+	                  	<th>IPA</th>
+	                </tr>
+	              	</thead>
+	              <tbody></tbody>
+	        	</table>
+	        </div>
+		</div>
+		<script src = "js/main.js"></script>
+	</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  Name: <input type="text" name="fname">
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html> -->
