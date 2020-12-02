@@ -9,71 +9,7 @@
 	</head>
 	<body class = "bg-dark">
 		<!-- <a href = "#l3.1">Heat Transfer Mechanisms</a> -->
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-		  <a class="navbar-brand" href="#">Physics Cheatsheet</a>
-		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-		    <span class="navbar-toggler-icon"></span>
-		  </button>
-		  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-		    <ul class="navbar-nav">
-		      <li class="nav-item">
-		        <a class="nav-link" href="#l3.1">Modes of Heat Transfer</a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="#l3.2">Conduction</a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="#l3.3">Conduction Through Composite Slabs</a>
-		      </li>
-			  <li class="nav-item">
-		        <a class="nav-link" href="#l3.4">Radiation</a>
-		      </li>
-			  <li class="nav-item">
-		        <a class="nav-link" href="#l4.1">Temperature Change</a>
-		      </li>
-			  <li class="nav-item">
-		        <a class="nav-link" href="#l4.2">Phase Change</a>
-		      </li>
-		    </ul>
-		  </div>
-		</nav>
 		<div class = "container-fluid" style = "width:85%">
-			<!-- <br/><br/><br/><br/><br/> -->
-			<h1 style = "text-align: center; color: white">Physics Cheat Sheet</h1>
-			<h3 id = "l3.1">Modes of Heat Transfer</h3>
-
-			<p><b>Heat</b> is the energy transferred from hotter to colder objects.</p>
-			<p>Forms of heat transfer:</p>
-			<ul>
-				<li>Conduction –– from objects that are physically in contact, especially solids
-					<ul>
-						<li>Caused by molecular collisions</li>
-						<li>Conservation of momentum</li>
-						<li>Ironing clothes, touching ice, coffee in mug</li>
-						<li>Occurs when, for example, liquids heat solids, as seen in the last example</li>
-					</ul>
-				</li>
-				<li>Convection –– occurs when molecules are not clumped up, such as in fluids, where conduction is negligible
-					<ul>
-						<li>Natural convection –– kettle filled with water: heat enters the kettle from the bottom, so the water
-							at the bottom heats up first. Since matter expands when heated, this small pocket of hot water
-							eventually spreads throughout the kettle.</li>
-						<li>Forced convection –– makes use of a fan or pump to force fluid to move (tumble dryer)</li>
-					</ul>
-				</li>
-				<li>Radiation –– occurs when objects are not in physical contact with one another; waves</li>
-			</ul>
-
-				<h3 id = "l3.2">Conduction</h3>
-				<img src = "heatcurrent.png"/>
-				<p>Where:</p>
-				<ul>
-					<li>P – heat current; the speed at which heat passes through a material in J/s or watts</li>
-					<li>Q – heat, in joules</li>
-					<li>t - time, in seconds</li>
-				</ul>
-				<img src = "rod.png"/>
-			<br/><br/><br/><br/><br/>
 			<h4>Q = mc∆T (put x in the value you want to calculate)</h4>
 			<form name = "f1" onsubmit = "return mctsingular(this)" method = "post">
 				<div class = "form-group row">
@@ -96,11 +32,43 @@
 						<input type="submit" class="btn btn-primary w-100" value = "Solve"></input>
 					</div>
 				</div>
+				<div class = "form-group row"><p id = "mctsingularresult">Answer:</p></div>
 			</form>
-			<!-- <div class = "row">
-				<div class = "col-5"></div>
-				<div class = "col-2"><button class = "btn btn-primary center" onclick = "solveEquation()">Solve</button></div>
-			</div> -->
+			<h4>mc∆T = mc∆T (put x in the value you want to calculate)</h4>
+			<form name = "f2" onsubmit = "return mct(this)" method = "post">
+				<div class = "form-group row">
+				    <div class="col-sm-2">
+				     	<input type="text" class="form-control" name = "m" placeholder="m" required>
+				    </div>
+					<div class="col-sm-2">
+				     	<input type="text" class="form-control" name = "c" placeholder="c" required>
+				    </div>
+					<div class="col-sm-2">
+				     	<input type="text" class="form-control" name = "tf" placeholder="final temp" required>
+				    </div>
+					<div class="col-sm-2">
+				     	<input type="text" class="form-control" name = "ti" placeholder="initial temp" required>
+				    </div>
+				</div>
+				<div class = "form-group row">
+					<div class="col-sm-2">
+				     	<input type="text" class="form-control" name = "m2" placeholder="m2" required>
+				    </div>
+					<div class="col-sm-2">
+				     	<input type="text" class="form-control" name = "c2" placeholder="c2" required>
+				    </div>
+					<div class="col-sm-2">
+				     	<input type="text" class="form-control" name = "tf2" placeholder="final temp2" required>
+				    </div>
+					<div class="col-sm-2">
+				     	<input type="text" class="form-control" name = "ti2" placeholder="initial temp2" required>
+				    </div>
+					<div class = "col-sm-2">
+						<input type="submit" class="btn btn-primary w-100" value = "Solve"></input>
+					</div>
+				</div>
+				<div class = "form-group row"><p id = "mctresult">Answer:</p></div>
+			</form>
 		</div>
 		<script src = "js/main.js"></script>
 		<script src="js/nerdamer.core.js"></script> <!-- assuming you've saved the file in the root of course -->
